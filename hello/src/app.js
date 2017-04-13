@@ -1,12 +1,13 @@
-console.log(window.document === document);
-console.log(window === self);
-console.log(document.lastModified);
-
-console.log(document.defaultView === window);
-console.log(document.title);
-
-console.log(document.body);
-
-document.body.innerHTML = "<h1>hey dom</h1>";
-
-console.log(window.screen);
+console.log(console);
+//console.clear();
+console.profile("log");
+console.time("logging");
+console.group();
+console.debug("debug");
+console.info("info");
+console.warn("warn");
+console.error("error");
+console.groupEnd();
+console.timeEnd("logging");
+console.profileEnd("log");
+console.trace();
