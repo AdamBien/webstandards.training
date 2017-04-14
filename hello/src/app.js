@@ -1,13 +1,5 @@
-console.log(console);
-//console.clear();
-console.profile("log");
-console.time("logging");
-console.group();
-console.debug("debug");
-console.info("info");
-console.warn("warn");
-console.error("error");
-console.groupEnd();
-console.timeEnd("logging");
-console.profileEnd("log");
-console.trace();
+let divs = document.getElementsByTagName("div");
+let div = divs.item(0);
+let childNodes = div.childNodes;
+let textNode = childNodes.item(0);
+console.log(textNode.textContent);
