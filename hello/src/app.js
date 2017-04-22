@@ -1,5 +1,17 @@
-let divs = document.getElementsByTagName("div");
-let div = divs.item(0);
-let childNodes = div.childNodes;
-let textNode = childNodes.item(0);
-console.log(textNode.textContent);
+let textInput = document.querySelector("input[type=text]");
+console.dir(textInput);
+
+let buttonInput = document.querySelector("input[type=button]");
+console.dir(buttonInput);
+
+let button = document.querySelector("button");
+console.dir(button);
+
+let select = document.querySelector("select");
+console.dir(select);
+
+let progress = document.querySelector("progress");
+console.dir(progress);
+
+let meter = document.querySelector("meter");
+console.dir(meter);
