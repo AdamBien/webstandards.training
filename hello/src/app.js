@@ -1,6 +1,8 @@
 let textInput = document.querySelector("input[type=text]");
 console.dir(textInput);
 
+textInput.addEventListener("keypress", e => console.log(e.target.value));
+
 let buttonInput = document.querySelector("input[type=button]");
 console.dir(buttonInput);
 
