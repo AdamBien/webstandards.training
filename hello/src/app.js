@@ -1,11 +1,9 @@
 let div = document.querySelector("div");
-let customFire = new CustomEvent("fire", {
-    detail: {
-        type: "hot",
-        prio:42
-    }
-});
 
-div.addEventListener("fire", e => console.log(e));
+let first = e => console.log("first", e);
 
-div.dispatchEvent(customFire);
+div.addEventListener("click", first);
+div.removeEventListener("click", first);
+
+div.addEventListener("click", e => console.log("second", e));
+div.addEventListener("click", e => console.log("third", e));
