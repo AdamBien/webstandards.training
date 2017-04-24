@@ -9,4 +9,18 @@ div.addEventListener("click", e => console.log("second", e));
 div.addEventListener("click", e => console.log("third", e));
 
 window.addEventListener("load", e => console.log("load", e));
-window.onunload = e => console.log("unload",e);
+window.onunload = e => console.log("unload", e);
+
+let text = document.querySelector("input[type=text]");
+console.dir(text);
+text.value = "hey duke";
+
+let button = document.querySelector("input[type=button]");
+button.value = "push me";
+
+let color = document.querySelector("input[type=color]");
+color.onchange = e => console.log(e.target.value);
+color.value = "#ffffff";
+
+let time = document.querySelector("input[type=time]");
+time.value = "02:42";
