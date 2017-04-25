@@ -23,4 +23,7 @@ color.onchange = e => console.log(e.target.value);
 color.value = "#ffffff";
 
 let time = document.querySelector("input[type=time]");
-time.value = "02:42";
+time.value = "13:13";
+//time.setAttribute("value", "11:12");
+let value = time.getAttribute("value");
+console.log("property",value);
