@@ -7,5 +7,4 @@ let text = document.querySelector("input[type=text]");
 text.onkeypress = e => div.innerText = e.target.value;
 
 let detail = document.getElementById('detail');
-detail.style.backgroundColor = 'white';
-detail.style.fontFamily = 'monospaced';
+detail.classList.add('mono');
