@@ -5,3 +5,7 @@ color.onchange = e => div.style.backgroundColor = e.target.value;
 
 let text = document.querySelector("input[type=text]");
 text.onkeypress = e => div.innerText = e.target.value;
+
+let detail = document.getElementById('detail');
+detail.style.backgroundColor = 'white';
+detail.style.fontFamily = 'monospaced';
