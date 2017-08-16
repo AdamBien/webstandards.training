@@ -1,14 +1,18 @@
-       body{
+    :root{
+        --airhacks-background:#01CD01;
+    }
+
+    body{
            font-family: sans-serif;
        }
        div{
-            background-color: green;
+            background-color: var(--airhacks-background);
         }
         .content{
             background-color:silver;
         }
         #detail{
-            background-color:springgreen;
+            background-color: var(--airhacks-background);
         }
 
         .mono{
