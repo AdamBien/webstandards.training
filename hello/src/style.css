@@ -11,7 +11,7 @@
     }
 
     div {
-        max-width: 800px;
+        max-width: 200px;
         @apply --airhacks-background;
     }
 
@@ -21,6 +21,12 @@
 
     #detail {
        @apply --airhacks-background;
+       margin-left: auto;
+       margin-right:auto;
+       padding: 10px;
+       border-color: black;
+       border-width: 15px;
+       border-style: dashed;
     }
 
     .mono {
