@@ -1,20 +1,27 @@
-    :root{
-        --airhacks-background:#01CD01;
+     :root {
+        --airhacks-background: {
+            background-color: #01CD01;
+            font-family:monospace;
+        }
+        
     }
 
-    body{
-           font-family: sans-serif;
-       }
-       div{
-            background-color: var(--airhacks-background);
-        }
-        .content{
-            background-color:silver;
-        }
-        #detail{
-            background-color: var(--airhacks-background);
-        }
+    body {
+        font-family: sans-serif;
+    }
 
-        .mono{
-            font-family: monospace;
-        }
+    div {
+        @apply --airhacks-background;
+    }
+
+    .content {
+        background-color: silver;
+    }
+
+    #detail {
+       @apply --airhacks-background;
+    }
+
+    .mono {
+        font-family: monospace;
+    }
