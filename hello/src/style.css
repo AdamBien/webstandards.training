@@ -11,6 +11,8 @@
     }
 
     div {
+        max-width: 80
+        0px;
         @apply --airhacks-background;
     }
 
