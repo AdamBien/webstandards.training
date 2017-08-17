@@ -8,3 +8,9 @@ text.onkeypress = e => div.innerText = e.target.value;
 
 let detail = document.getElementById('detail');
 detail.classList.add('mono');
+
+
+console.log("div font size", window.getComputedStyle(div).fontSize);
+
+let html = document.querySelector("html");
+console.log("html default font size",getComputedStyle(html).fontSize);
