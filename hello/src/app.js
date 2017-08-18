@@ -13,4 +13,8 @@ detail.classList.add('mono');
 console.log("div font size", window.getComputedStyle(div).fontSize);
 
 let html = document.querySelector("html");
-console.log("html default font size",getComputedStyle(html).fontSize);
+console.log("html default font size", getComputedStyle(html).fontSize);
+
+
+let last = document.querySelector("#last");
+console.log("position",getComputedStyle(last).position);

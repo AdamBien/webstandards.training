@@ -8,6 +8,7 @@
 
     body {
         font-family: sans-serif;
+        height: 120vh;
     }
 
     div {
@@ -21,6 +22,14 @@
 
     section{
         font-size: 24px;
+    }
+
+    #last{
+        background-color: lightcoral;
+        position: relative;
+        top: 1rem;
+        left: 2rem;
+        bottom: 1em;
     }
 
     #detail {
