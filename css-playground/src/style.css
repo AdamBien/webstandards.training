@@ -1,0 +1,9 @@
+body{
+    background: silver;
+}
+div{
+    background: darkgreen;
+    margin: 1em 2em 3em 4em;
+    padding: 1em 1em 2em 5em;
+    box-sizing: border-box;
+}
