@@ -2,8 +2,12 @@ body{
     background: silver;
 }
 div{
+    width: 500px;
+    height: 500px;
     background: darkgreen;
-    margin: 1em 2em 3em 4em;
-    padding: 1em 1em 2em 5em;
+    padding: 10px;
+    border-style: dashed;
+    border-width: 15px;
     box-sizing: border-box;
+    margin: 30px;
 }
