@@ -2,16 +2,16 @@ body{
     height: 100vh;
     background: silver;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
 }
 div{
-    width: 500px;
-    height: 500px;
+    width: 4em;
+    height: 4em;
     background: darkgreen;
-    padding: 10px;
-    border-style: dashed;
-    border-width: 15px;
     box-sizing: border-box;
-    margin: 30px;
+    margin: 0em;
 }
