@@ -1,17 +1,15 @@
 body{
     height: 100vh;
     background: silver;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    
 
 }
 div{
-    width: 4em;
-    height: 4em;
     background: darkgreen;
     box-sizing: border-box;
-    margin: 0em;
 }
