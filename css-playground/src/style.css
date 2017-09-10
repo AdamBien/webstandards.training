@@ -20,11 +20,18 @@ nav{
     grid-column: 1;
 }
 main{
+    display: grid;
     background: yellowgreen;
+    grid-template-columns: repeat(3,1fr 2fr);
     grid-column: 2 / 3;
+    grid-gap: 0.2em;
 }
 
 footer{
     grid-column: 1 / 3;
     background: blueviolet;
+}
+
+div{
+    background: #009900;
 }
