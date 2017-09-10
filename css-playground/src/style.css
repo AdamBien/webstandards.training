@@ -1,15 +1,36 @@
-body{
+section{
     height: 100vh;
     background: silver;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 6fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+    "footer footer";
     grid-column-gap: 0.5em;
     grid-row-gap: 0.5em;
     
 
 }
 div{
-    background: darkgreen;
     box-sizing: border-box;
+}
+
+header{
+    background: lightgreen;
+    grid-area: header;
+}
+nav{
+    background:darkgreen;
+    grid-area:nav;
+}
+main{
+    grid-area: main;
+    background: yellowgreen;
+}
+
+footer{
+    grid-area: footer;
+    background: blueviolet;
 }
