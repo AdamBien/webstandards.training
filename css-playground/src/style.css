@@ -4,14 +4,7 @@ section{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 6fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "nav main"
-    "footer footer";
-    grid-column-gap: 0.5em;
-    grid-row-gap: 0.5em;
-    justify-items: center;
-    align-items: start;
+    grid-gap: 0.5em;
 
 }
 div{
@@ -20,21 +13,18 @@ div{
 
 header{
     background: lightgreen;
-    grid-area: header;
+    grid-column: 1 / 3;
 }
 nav{
     background:darkgreen;
-    grid-area:nav;
+    grid-column: 1;
 }
 main{
-    grid-area: main;
     background: yellowgreen;
-    align-self: stretch;
-
+    grid-column: 2 / 3;
 }
 
 footer{
-    justify-self: center;
-    grid-area: footer;
+    grid-column: 1 / 3;
     background: blueviolet;
 }
