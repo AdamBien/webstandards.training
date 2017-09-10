@@ -10,7 +10,8 @@ section{
     "footer footer";
     grid-column-gap: 0.5em;
     grid-row-gap: 0.5em;
-    
+    justify-items: center;
+    align-items: start;
 
 }
 div{
@@ -28,9 +29,12 @@ nav{
 main{
     grid-area: main;
     background: yellowgreen;
+    align-self: stretch;
+
 }
 
 footer{
+    justify-self: center;
     grid-area: footer;
     background: blueviolet;
 }
