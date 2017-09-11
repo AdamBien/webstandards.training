@@ -15,9 +15,15 @@ const sayHello = function(greeting) {
     console.log('global',greeting);
 }
 
+sayHello('chief duke');
+
 const withParams = new App('java');
 withParams.init();
 withParams.init(sayHello);
+
+(function (content) {
+    console.log('anonymous', content);
+}('duke'));
 
 
 
