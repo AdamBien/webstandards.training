@@ -4,7 +4,7 @@ class App {
         console.log('created',this);
     }
 
-    init(callback) {
+    init(callback = function (param) { console.log('not defined',param) }) {
         console.log('initialized', this.message);
         callback(this.message);
     }
@@ -16,6 +16,7 @@ const sayHello = function(greeting) {
 }
 
 const withParams = new App('java');
+withParams.init();
 withParams.init(sayHello);
 
 
