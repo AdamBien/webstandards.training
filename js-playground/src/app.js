@@ -4,20 +4,19 @@ class App {
         console.log('created',this);
     }
 
-    init() {
+    init(callback) {
         console.log('initialized', this.message);
-        hello(this.message);
+        callback(this.message);
     }
 }
 
-console.log('load time');
 
-function hello(greeting) { 
+const sayHello = function(greeting) { 
     console.log('global',greeting);
 }
 
 const withParams = new App('java');
-withParams.init();
+withParams.init(sayHello);
 
 
 
