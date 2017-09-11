@@ -1,29 +1,32 @@
 class App { 
     constructor(message='duke') { 
         this.message = message;
-        console.log('created',this);
+        this.first = new Text('first');
+        this.second = new Text('second');
+        this.init();
     }
 
-    init(callback = function (param) { console.log('not defined',param) }) {
-        console.log('initialized', this.message);
-        callback(this.message);
+    init() { 
+        this.first.content(`first content: ${this.message}`);
+        this.second.content("another content");
     }
+
 }
 
 
-const sayHello = function(greeting) { 
-    console.log('global',greeting);
+class Text { 
+    constructor(id) { 
+        this.domElement = document.querySelector(`#${id}`);
+    }
+
+    content(text='not set') { 
+        this.domElement.innerText = text;
+    }
 }
 
-sayHello('chief duke');
+new App('java rocks');
 
-const withParams = new App('java');
-withParams.init();
-withParams.init(sayHello);
 
-(function (content) {
-    console.log('anonymous', content);
-}('duke'));
 
 
 
