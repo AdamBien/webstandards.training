@@ -16,6 +16,8 @@ header{
     grid-column: 1 / 3;
 }
 nav{
+    display: flex;
+    flex-direction: column;
     background:darkgreen;
     grid-column: 1;
 }
@@ -24,7 +26,7 @@ main{
     background: yellowgreen;
     grid-template-columns: repeat(3,1fr 2fr);
     grid-column: 2 / 3;
-    grid-gap: 0.2em;
+    grid-gap: 0.5em;
 }
 
 footer{
@@ -34,4 +36,53 @@ footer{
 
 div{
     background: #009900;
+}
+
+main >  div{
+    box-shadow: darkgreen 5px 5px 2px;
+}
+
+nav > a:hover{
+    background: lightgreen;
+}
+
+nav > div:nth-of-type(even){
+    background: sienna;
+}
+
+div:nth-child(3){
+    background:cornflowerblue;
+}
+div:nth-last-child(1){
+    background:cornflowerblue;
+}
+
+a{
+    padding:0.5em;
+    text-decoration: none;
+}
+
+a:active{
+    color:whitesmoke;
+}
+
+a[href='http://airhacks.io']{
+    text-decoration: yellow underline wavy;
+}
+
+a[href='http://adambien.blog']{
+    text-decoration:blanchedalmond underline double;
+}
+
+a[href^='http']{
+    font-size: 2em;
+    font-family: monospace;
+}
+
+a[href$='blog']{
+    background: wheat;
+}
+
+a[href*="airh"]{
+    color:burlywood;
 }
