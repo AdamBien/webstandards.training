@@ -1,18 +1,18 @@
 import Text from './text.js'
 export default class Input extends Text { 
 
-    constructor(id,changeListener) { 
+    constructor(id,listeners) { 
         super(id);
-        this.changeListener = changeListener;
+        this.listeners = listeners;
         this.onTextChange = this.onTextChange.bind(this);
         this.register();
     }
 
     register() { 
-        this.domElement.onchange = this.onTextChange;
+       this.listeners.forEach(l=>this.domElement.addEventListener('change',l));
     }
 
     onTextChange(e) { 
-        this.changeListener(e.target.value);
+     
     }
 }
