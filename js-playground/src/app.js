@@ -7,7 +7,7 @@ class App {
         this.first = new Text('first');
         this.second = new Text('second');
         const listener =  e => console.log(e);
-        this.firstInput = new Input('firstInput');
+        this.firstInput = new Input('firstInput',listener);
         this.init();
     }
 
