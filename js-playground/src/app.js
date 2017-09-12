@@ -18,7 +18,15 @@ class App {
 
 }
 
+const array = Array.of(1, 2, 3);
 
+const another = [4, 5, 6];
+
+//console.log(array.length);
+
+const third = array.concat(another);
+
+third.filter(n=>n%2==1).map(nr=>`Result is: ${nr}`).forEach(n => console.log(n));
 
 
 new App('java rocks');
