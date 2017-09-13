@@ -29,6 +29,15 @@ class App {
 
 }
 
+const exceptional = () => {  throw new Error('41') };
+try {
+    exceptional();
+} catch (e) {
+    console.log(`${e.message} -> ${e.stack}`);
+    console.error(e);
+} finally { 
+    console.info("always executed");
+}    
 
 new App('java rocks');
 
