@@ -31,10 +31,10 @@ class App {
         }    
     }
 
-    output({ answer: result, precision: occuracy }) { 
+    output({ answer: result, precision: occuracy, duration:time='years' }) { 
         
-        console.log(result,occuracy);
-        this.first.content(result);
+        console.log(result,occuracy,time);
+        this.first.content(`${result} - ${time}`);
     }
 
 }

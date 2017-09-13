@@ -10,7 +10,8 @@ export default class Answer{
     calculate() { 
         return {
             answer: Math.random(),
-            precision: 'low'
+            precision: 'low',
+            duration: 'seconds'
         }
     }
 }
