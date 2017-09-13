@@ -22,7 +22,9 @@ class App {
     }
 
     getAnswer() { 
-        this.answer.answer().then(r => this.first.content(r));
+        this.answer.answer().
+            then(r => this.first.content(r)).
+            catch(e => console.info(e));
     }
 
 }
