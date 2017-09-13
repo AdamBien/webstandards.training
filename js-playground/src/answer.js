@@ -2,9 +2,15 @@ export default class Answer{
 
     answer() { 
         return new Promise((resolve, reject) => { 
-            setTimeout(()=>reject(Math.random()),1000);
+            setTimeout(()=>resolve(this.calculate()),1000);
         });
         
     }
 
+    calculate() { 
+        return {
+            answer: Math.random(),
+            precision: 'low'
+        }
+    }
 }
