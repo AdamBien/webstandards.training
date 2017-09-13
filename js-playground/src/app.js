@@ -23,8 +23,12 @@ class App {
 
     
     async getAnswer() { 
-        const result = await this.answer.answer();
-        this.first.content(result);
+        try {
+            const result = await this.answer.answer();
+            this.first.content(result);
+        } catch (e) { 
+            console.error(`error happened: ${e}`);
+        }    
     }
 
 }
