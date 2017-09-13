@@ -24,12 +24,17 @@ class App {
     
     async getAnswer() { 
         try {
-            const { answer,precision } = await this.answer.answer();
-            console.log(answer,precision);
-            this.first.content(answer);
+            const result = await this.answer.answer();
+            this.output(result);
         } catch (e) { 
             console.error(`error happened: ${e}`);
         }    
+    }
+
+    output({ answer: result, precision: occuracy }) { 
+        
+        console.log(result,occuracy);
+        this.first.content(result);
     }
 
 }
