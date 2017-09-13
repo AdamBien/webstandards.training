@@ -21,23 +21,14 @@ class App {
         this.answerButton.onclick = this.getAnswer;
     }
 
-    getAnswer() { 
-        this.answer.answer().
-            then(r => this.first.content(r)).
-            catch(e => console.info(e));
+    
+    async getAnswer() { 
+        const result = await this.answer.answer();
+        this.first.content(result);
     }
 
 }
 
-const exceptional = () => {  throw new Error('41') };
-try {
-    exceptional();
-} catch (e) {
-    console.log(`${e.message} -> ${e.stack}`);
-    console.error(e);
-} finally { 
-    console.info("always executed");
-}    
 
 new App('java rocks');
 
