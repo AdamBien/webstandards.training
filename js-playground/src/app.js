@@ -23,8 +23,9 @@ class App {
 
     
     async getAnswer() { 
+        this.answer.answer = 'duke...';
         try {
-            const result = await this.answer.answer();
+            const result = await this.answer.answer;
             this.output(result);
         } catch (e) { 
             console.error(`error happened: ${e}`);
