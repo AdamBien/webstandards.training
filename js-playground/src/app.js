@@ -1,6 +1,7 @@
 import Text from './text.js';
 import Input from './input.js';
 import Answer from './answer.js';
+import Store from './store.js';
 
 class App { 
     constructor(message='duke') { 
@@ -12,6 +13,7 @@ class App {
         this.answer = new Answer();
         this.answerButton = Text.lookup('slow');
         this.getAnswer = this.getAnswer.bind(this);
+        this.store = new Store('response');
         this.init();
     }
 
@@ -23,13 +25,17 @@ class App {
 
     
     async getAnswer() { 
-        this.answer.answer = 'duke...';
-        try {
-            const result = await this.answer.answer;
-            this.output(result);
-        } catch (e) { 
-            console.error(`error happened: ${e}`);
-        }    
+        let result = this.store.load();
+        if (!result) {
+            try {
+                result = await this.answer.answer;
+                this.store.store(result);
+            
+            } catch (e) {
+                console.error(`error happened: ${e}`);
+            }
+        }
+        this.output(result);
     }
 
     output({ answer: result, precision: occuracy, duration:time='years' }) { 

@@ -7,9 +7,6 @@ export default class Answer{
         
     }
 
-    set answer(something) { 
-        console.log(something);
-    }
 
     async fetchFromServer() { 
         return await fetch('answer.json').then(response => response.json());
