@@ -2,16 +2,12 @@ export default class Answer{
 
     answer() { 
         return new Promise((resolve, reject) => { 
-            setTimeout(()=>resolve(this.calculate()),1000);
+            setTimeout(()=>resolve(this.fetchFromServer()),1000);
         });
         
     }
 
-    calculate() { 
-        return {
-            answer: Math.random(),
-            precision: 'low',
-            duration: 'seconds'
-        }
+    async fetchFromServer() { 
+        return await fetch('answer.json').then(response => response.json());
     }
 }
