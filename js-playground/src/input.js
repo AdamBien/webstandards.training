@@ -4,15 +4,19 @@ export default class Input extends Text {
     constructor(id,...listeners) { 
         super(id);
         this.listeners = listeners;
-        this.extract = this.extract.bind(this);
+        this.delegate = this.delegate.bind(this);
         this.register();
     }
 
     register() { 
-       this.listeners.forEach(l=>this.domElement.addEventListener('change',this.extract(l)));
+       this.listeners.forEach(l=>this.domElement.addEventListener('change',this.delegate(l)));
     }
 
-    extract(listener) { 
-        return evt => listener(evt.target.value);
+    delegate(listener) { 
+        return ({ target: { value } }) => listener(value + 'really');
+    }
+
+    extract({ target: { value } }) { 
+        return  value;
     }
 }
