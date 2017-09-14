@@ -1,6 +1,7 @@
 import Text from './text.js';
 import Input from './input.js';
 import Answer from './answer.js';
+import Table from './table.js';
 import * as storage from './store.js';
 
 class App { 
@@ -8,6 +9,7 @@ class App {
         this.message = message;
         this.first = new Text('first');
         this.second = new Text('second');
+        this.table = new Table('answers');
         const listener =  e => console.log(e);
         this.firstInput = new Input('firstInput', listener);
         this.answer = new Answer();
@@ -19,6 +21,10 @@ class App {
     }
 
     init() { 
+        this.table.addHeader('java');
+        this.table.addHeader('duke');
+        this.table.addRow(1,2,3);
+        this.table.addRow(4,5,6);
         this.first.content(`first content: ${this.message}`);
         this.second.content("another content");
         this.answerButton.onclick = this.getAnswer;
