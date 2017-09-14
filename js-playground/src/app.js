@@ -39,8 +39,9 @@ class App {
         this.output(result);
     }
 
-    output({ answer: result, precision: occuracy, duration:time='years' }) { 
-        
+    output([first,...everything]) { 
+        const { answer: result, precision: occuracy, duration: time = 'years' } = first;
+        console.log(everything);
         console.log(result,occuracy,time);
         this.first.content(`${result} - ${time}`);
     }

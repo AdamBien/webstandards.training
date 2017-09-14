@@ -1,5 +1,19 @@
+[
+    {
+    "answer": "first seems to work on server",
+    "precision": "1 high",
+    "duration": "1 years"
+},
 {
-    "answer": "seems to work on server",
-    "precision": "high",
-    "duration": "years"
+    "answer": "second seems to work on server",
+    "precision": "2 high",
+    "duration": "2 years"
 }
+,
+{
+    "answer": "third seems to work on server",
+    "precision": "3 high",
+    "duration": "3 years"
+}
+
+]
