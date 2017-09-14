@@ -1,4 +1,4 @@
-export default class Store { 
+export class Store { 
 
     constructor(name) { 
         this.slot = name;
@@ -15,3 +15,5 @@ export default class Store {
         return JSON.parse(stringified);
     }
 }
+
+export const precalculated = 'probably 42';

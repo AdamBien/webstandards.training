@@ -1,7 +1,7 @@
 import Text from './text.js';
 import Input from './input.js';
 import Answer from './answer.js';
-import Store from './store.js';
+import * as storage from './store.js';
 
 class App { 
     constructor(message='duke') { 
@@ -13,7 +13,8 @@ class App {
         this.answer = new Answer();
         this.answerButton = Text.lookup('slow');
         this.getAnswer = this.getAnswer.bind(this);
-        this.store = new Store('response');
+        this.store = new storage.Store('response');
+        console.log(storage.precalculated);
         this.init();
     }
 
