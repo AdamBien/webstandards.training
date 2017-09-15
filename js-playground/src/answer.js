@@ -9,6 +9,6 @@ export default class Answer{
 
 
     async fetchFromServer() { 
-        return await fetch('answer.json').then(response => response.json());
+        return await fetch('http://localhost:8080/answers/resources/answers').then(response => response.json());
     }
 }
