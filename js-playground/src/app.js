@@ -43,9 +43,10 @@ class App {
 
     output(data) { 
         const [first] = data;
-        Reflect.ownKeys(first).forEach(name => this.table.addHeader(name));
-        for (let { answer: result, precision: occuracy, duration: time = 'years' } of data) { 
-            this.table.addRow(result,occuracy,time);
+        const keys = Reflect.ownKeys(first);
+        keys.forEach(name => this.table.addHeader(name));
+        for (let row of data) { 
+            this.table.addRow(keys.map(key => row[key]));
         }
     }
 

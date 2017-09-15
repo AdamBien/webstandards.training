@@ -11,7 +11,7 @@ export default class Table {
         this.head.appendChild(th);
 
     }
-    addRow(...columns) { 
+    addRow(columns) { 
         const row = document.createElement('tr');
         columns.
             map(col => this.td(col)).
