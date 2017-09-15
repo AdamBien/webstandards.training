@@ -18,7 +18,7 @@ public class AnswersResource {
     @GET
     public JsonArray answers() {
         JsonArrayBuilder retVal = Json.createArrayBuilder();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10000; i++) {
             retVal.add(this.create("answer " + i, i * 5, i));
         }
         return retVal.build();
