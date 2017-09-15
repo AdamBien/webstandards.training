@@ -2,14 +2,13 @@ export default class Table {
     constructor(id) { 
         this.table = document.getElementById(id);
         this.head = this.table.getElementsByTagName('thead')[0];
-        this.headerRow = this.head.getElementsByTagName('tr')[0];
         this.body = this.table.getElementsByTagName('tbody')[0];
     }
 
     addHeader(rowName) { 
         const th = document.createElement('th');
         th.innerText = rowName;
-        this.headerRow.appendChild(th);
+        this.head.appendChild(th);
 
     }
     addRow(...columns) { 

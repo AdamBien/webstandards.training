@@ -1,3 +1,20 @@
 div{
     background:lightgreen;
 }
+
+th{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-align: left;
+    border-bottom: darkgray 1px solid;
+}
+tr:nth-of-type(even){
+    background: lightblue;
+}
+td{
+    font-size: 0.8em;
+}
+
+table{
+    padding: 1em;
+}
