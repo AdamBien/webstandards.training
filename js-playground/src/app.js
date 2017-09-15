@@ -21,10 +21,6 @@ class App {
     }
 
     init() { 
-        this.table.addHeader('java');
-        this.table.addHeader('duke');
-        this.table.addRow(1,2,3);
-        this.table.addRow(4,5,6);
         this.first.content(`first content: ${this.message}`);
         this.second.content("another content");
         this.answerButton.onclick = this.getAnswer;
@@ -45,11 +41,12 @@ class App {
         this.output(result);
     }
 
-    output([first,...everything]) { 
-        const { answer: result, precision: occuracy, duration: time = 'years' } = first;
-        console.log(everything);
-        console.log(result,occuracy,time);
-        this.first.content(`${result} - ${time}`);
+    output(data) { 
+        const [first] = data;
+        Reflect.ownKeys(first).forEach(name => this.table.addHeader(name));
+        for (let { answer: result, precision: occuracy, duration: time = 'years' } of data) { 
+            this.table.addRow(result,occuracy,time,'another');
+        }
     }
 
 }
